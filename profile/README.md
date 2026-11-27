@@ -1,23 +1,21 @@
 # Finance Lab
 
-Finance Lab is a personal budgeting app for planning monthly income, spending and investment contributions. It supports configurable categories, historical entries, and monthly and yearly review. The interface is in Russian and budgets use whole rubles.
+Finance Lab is a personal finance app for planning a month in rubles and reviewing how it went. The Russian-language interface works on desktop and phone. Enter income, category spending and investment contributions, then compare the saved months in a yearly report.
 
-[Open Finance Lab](https://finance-lab-project.com/) · [Source and documentation](https://github.com/finance-lab-project/finance-lab) · [v0.1.0 release](https://github.com/finance-lab-project/finance-lab/releases/tag/v0.1.0)
+[Try the local demo](https://github.com/finance-lab-project/finance-lab#run-the-local-fixture) · [Latest release](https://github.com/finance-lab-project/finance-lab/releases/latest) · [Owner sign-in](https://finance-lab-project.com/)
 
-## Current release
+The hosted instance serves one configured owner. The local demo uses disposable accounts and a sample budget.
 
-v0.1.0 runs as a single Spring Boot application backed by SQLite. It supports one configured owner account on desktop and phone. Portfolio analysis and financial-independence planning are later product areas.
+## Application and architecture
 
-## Development
+The [application repository](https://github.com/finance-lab-project/finance-lab) contains the Java and Spring Boot application, Thymeleaf screens and SQLite storage. The [implementation decision](https://github.com/finance-lab-project/finance-lab/blob/main/docs/implementation-approach.md) explains why this design fits the monthly budgeting workflow. The [release notes](https://github.com/finance-lab-project/finance-lab/releases) record the features available in each published version.
 
-Start with the application repository and the Budget v1 documentation. Use synthetic financial data in examples, tests, issues and pull requests. Human review and approval are required before merge, release or deployment.
+## How changes reach production
 
-[Product scope](https://github.com/finance-lab-project/finance-lab/blob/main/docs/product-scope.md) · [Budget v1 user journey](https://github.com/finance-lab-project/finance-lab/blob/main/docs/budget-v1-user-journey.md) · [Implementation approach](https://github.com/finance-lab-project/finance-lab/blob/main/docs/implementation-approach.md)
+The maintainer authorizes sprint work through GitHub issues. For work handled by the sprint worker, Codex implements a change and a separate review session checks the pull request. GitHub requires passing CI and approval before merge. Deployment takes place during a separate maintenance window with backup and verification checks.
+
+[Sprint board](https://github.com/orgs/finance-lab-project/projects/11/views/1) · [Sprint worker](https://github.com/finance-lab-project/finance-lab/blob/main/ops/agents/README.md) · [Release process](https://github.com/finance-lab-project/finance-lab#releases)
 
 ## Project history
 
-The previous Java/Vaadin and PostgreSQL implementation is preserved in the earlier application, Budget module and custom ORM repositories. [Application](https://github.com/finance-lab-project/app) · [Budget](https://github.com/finance-lab-project/budget) · [ORM](https://github.com/finance-lab-project/orm)
-
-The module plans from that iteration are available for reference. [Portfolio](https://github.com/finance-lab-project/portfolio) · [FIRE](https://github.com/finance-lab-project/fire)
-
-The organization’s archives also preserve earlier React, Go and infrastructure work.
+The earlier Java/Vaadin and PostgreSQL implementation is archived in the [application](https://github.com/finance-lab-project/app), [Budget module](https://github.com/finance-lab-project/budget) and [custom ORM](https://github.com/finance-lab-project/orm) repositories. The archived [Portfolio](https://github.com/finance-lab-project/portfolio) and [FIRE](https://github.com/finance-lab-project/fire) repositories preserve module plans from that iteration.
